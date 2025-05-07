@@ -1,0 +1,838 @@
+/* Base Styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Segoe UI', sans-serif;
+    background-color: #f8f9fa;
+    color: #333;
+    scroll-behavior: smooth;
+}
+
+section {
+    padding-top: 80px;
+    padding-bottom: 80px;
+}
+
+/* Navbar */
+.navbar-brand {
+    font-size: 1.5rem;
+}
+
+.nav-link {
+    font-weight: 500;
+    color: #333;
+    transition: color 0.3s ease;
+}
+
+.nav-link:hover {
+    color: #0d6efd;
+}
+
+/* Hero Section */
+.hero-section {
+    /* background: linear-gradient(135deg, #1e3c72, #2a5298); */
+    color: white;
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    animation: fadeSlideIn 1.2s ease-out;
+}
+
+.hero-section .btn {
+    font-size: 1.2rem;
+    padding: 12px 30px;
+    transition: transform 0.3s ease;
+}
+
+.hero-section .btn:hover {
+    transform: scale(1.05);
+}
+
+/* Updated styles for hero section text to ensure visibility over the background video */
+.hero-section h1 {
+    color: #ffffff; /* White color for clear visibility */
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.7); /* Add shadow for better contrast */
+}
+
+.hero-section p {
+    color: #f0f0f0; /* Slightly off-white for a softer look */
+    text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.7); /* Add shadow for better contrast */
+}
+
+/* Services Section */
+.services-section {
+    padding: 60px 20px;
+    text-align: center;
+}
+
+.section-title {
+    font-size: 2.5rem;
+    margin-bottom: 40px;
+    color: #444;
+}
+
+.services-grid {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 30px;
+    max-width: 1300px;
+    margin: auto;
+}
+
+/* Updated styles for service cards to increase size, improve image clarity, and add animations */
+.service-card {
+    width: 300px; /* Increased size */
+    height: 400px; /* Adjusted height */
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    border-radius: 15px;
+    overflow: hidden;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+}
+
+.service-card img {
+    width: 100%;
+    height: 60%; /* Adjusted to fit the card */
+    object-fit: cover; /* Ensures image clarity */
+    transition: transform 0.3s ease;
+}
+
+.service-card:hover {
+    transform: translateY(-10px) scale(1.05);
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.2);
+}
+
+.service-card:hover img {
+    transform: scale(1.1); /* Zoom effect on hover */
+}
+
+.service-card h3 {
+    font-size: 1.5rem; /* Increased font size */
+    margin-top: 15px;
+    color: #333;
+    text-align: center;
+}
+
+.service-card .btn {
+    display: block;
+    margin: 20px auto 0;
+    padding: 10px 20px;
+    font-size: 1rem;
+    transition: background-color 0.3s ease, transform 0.3s ease;
+}
+
+.service-card .btn:hover {
+    background-color: #0056b3;
+    transform: scale(1.1);
+}
+
+/* About Image */
+#about img {
+    border-radius: 1rem;
+    transition: transform 0.3s ease;
+}
+
+#about img:hover {
+    transform: scale(1.03);
+}
+
+/* Testimonials Section */
+#testimonials .card {
+    border: none;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+#testimonials .card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.15);
+}
+
+#testimonials .card-img-top {
+    height: 200px;
+    object-fit: cover;
+    border-top-left-radius: 0.5rem;
+    border-top-right-radius: 0.5rem;
+}
+
+#testimonials .card-title {
+    font-size: 1.25rem;
+    margin-bottom: 0.5rem;
+}
+
+#testimonials .card-text {
+    font-size: 0.95rem;
+    color: #555;
+}
+
+#testimonials .btn {
+    transition: background-color 0.3s ease, transform 0.3s ease;
+}
+
+#testimonials .btn:hover {
+    background-color: #0056b3;
+    transform: scale(1.05);
+}
+
+/* Contact Section */
+#contact input,
+#contact textarea {
+    border-radius: 0.5rem;
+    box-shadow: none;
+    transition: border-color 0.3s ease;
+}
+
+#contact input:focus,
+#contact textarea:focus {
+    border-color: #0d6efd;
+    outline: none;
+    box-shadow: 0 0 0 0.1rem rgba(13, 110, 253, 0.25);
+}
+
+#contact button {
+    transition: transform 0.3s ease;
+}
+
+#contact button:hover {
+    transform: scale(1.05);
+}
+
+/* Animations */
+@keyframes fadeSlideIn {
+    0% {
+        opacity: 0;
+        transform: translateY(-30px);
+    }
+    100% {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* Solutions Lab Section */
+.solutions-section {
+    background-color: #f8f9fa;
+    padding: 60px 20px;
+    text-align: center;
+}
+
+.solutions-section h2 {
+    font-size: 2.5rem;
+    margin-bottom: 40px;
+    color: #333;
+}
+
+.solution-card {
+    padding: 20px;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    border-radius: 10px;
+}
+
+.solution-card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.15);
+}
+
+.solution-icon {
+    width: 80px;
+    height: 80px;
+    transition: transform 0.3s ease;
+}
+
+.solution-card:hover .solution-icon {
+    transform: scale(1.1);
+}
+
+.solution-card h3 {
+    font-size: 1.25rem;
+    margin-top: 15px;
+    color: #333;
+}
+
+.solution-card p {
+    font-size: 0.95rem;
+    color: #555;
+}
+
+.btn-success {
+    background-color: #28a745;
+    border: none;
+    transition: background-color 0.3s ease, transform 0.3s ease;
+}
+
+.btn-success:hover {
+    background-color: #218838;
+    transform: scale(1.05);
+}
+
+/* Footer Section */
+footer {
+    background-color: #003366; /* Dark blue background */
+    color: #ffffff; /* White text */
+}
+
+footer h5 {
+    font-size: 1.25rem;
+    margin-bottom: 1rem;
+}
+
+footer p {
+    font-size: 0.95rem;
+    line-height: 1.6;
+}
+
+footer a {
+    color: #ffffff;
+    transition: color 0.3s ease;
+}
+
+footer a:hover {
+    color: #00bcd4; /* Light blue hover effect */
+}
+
+footer .bi {
+    font-size: 1.5rem;
+    transition: transform 0.3s ease, color 0.3s ease;
+}
+
+footer .bi:hover {
+    transform: scale(1.2);
+    color: #00bcd4;
+}
+
+footer .border-end {
+    padding-right: 20px;
+}
+
+footer hr {
+    border-color: rgba(255, 255, 255, 0.2);
+}
+
+footer .text-center p {
+    font-size: 0.9rem;
+    margin-top: 1rem;
+}
+
+/* Responsive Adjustments */
+@media (max-width: 768px) {
+    .hero-section {
+        height: auto;
+        padding: 100px 20px;
+    }
+
+    #about .row {
+        flex-direction: column-reverse;
+    }
+
+    .services-grid {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    #testimonials .card-img-top {
+        height: 150px;
+    }
+
+    .solution-card {
+        margin-bottom: 20px;
+    }
+
+    .solution-icon {
+        width: 60px;
+        height: 60px;
+    }
+}
+
+#hero {
+    position: relative;
+    overflow: hidden;
+}
+
+#background-video {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    z-index: -1;
+}
+
+.whatsapp-button {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    background-color: #25D366;
+    border-radius: 50%;
+    width: 60px;
+    height: 60px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+    cursor: pointer;
+    z-index: 999;
+    transition: transform 0.3s;
+}
+
+.whatsapp-button:hover {
+    transform: scale(1.1);
+}
+
+.whatsapp-button img {
+    width: 35px;
+    height: 35px;
+}
+
+.call-button {
+    position: fixed;
+    bottom: 90px; /* Positioned above WhatsApp button */
+    right: 20px;
+    background-color: #0a8d48;
+    border-radius: 50%;
+    width: 60px;
+    height: 60px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+    cursor: pointer;
+    z-index: 1000;
+    transition: transform 0.3s;
+}
+
+.call-button:hover {
+    transform: scale(1.1);
+}
+
+.call-button img {
+    width: 32px;
+    height: 32px;
+}
+
+.location-button {
+    position: fixed;
+    bottom: 160px; /* Positioned above Phone Call button */
+    right: 20px; /* Aligned with other buttons on the right */
+    background-color: #4285F4;
+    border-radius: 50%;
+    width: 60px;
+    height: 60px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+    cursor: pointer;
+    z-index: 1000;
+    transition: transform 0.3s;
+}
+
+.location-button:hover {
+    transform: scale(1.1);
+}
+
+.location-button img {
+    width: 32px;
+    height: 32px;
+}
+
+/* Updated scrolling-wrapper to stop scrolling on hover and include all cards */
+.scrolling-wrapper {
+    display: flex;
+    overflow: hidden;
+    white-space: nowrap;
+    animation: slide-left-to-right 20s linear infinite;
+}
+
+@keyframes slide-left-to-right {
+    0% {
+        transform: translateX(-100%);
+    }
+    100% {
+        transform: translateX(100%);
+    }
+}
+
+.scrolling-wrapper:hover {
+    animation-play-state: paused; /* Stops scrolling on hover */
+}
+
+.scrolling-wrapper .service-card {
+    flex: 0 0 auto;
+    margin-right: 20px;
+    width: 300px;
+    height: 400px;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    border-radius: 15px;
+    overflow: hidden;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+}
+
+.scrolling-wrapper .service-card img {
+    width: 100%;
+    height: 60%;
+    object-fit: cover;
+    transition: transform 0.3s ease;
+}
+
+.scrolling-wrapper .service-card:hover {
+    transform: translateY(-10px) scale(1.05);
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.2);
+}
+
+.scrolling-wrapper .service-card:hover img {
+    transform: scale(1.1);
+}
+
+/* Services Section */
+#services {
+    background-color: #f8f9fa;
+    padding: 60px 20px;
+    text-align: center;
+}
+
+#services .section-title {
+    font-size: 2.5rem;
+    margin-bottom: 40px;
+    color: #444;
+}
+
+#services .scrolling-wrapper {
+    display: flex;
+    overflow: hidden;
+    white-space: nowrap;
+    animation: scroll 10s linear infinite; /* Adjusted speed for faster scrolling */
+}
+
+#services .scrolling-wrapper .service-card {
+    flex: 0 0 auto;
+    margin-right: 20px;
+    width: 300px;
+    height: 400px;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    border-radius: 15px;
+    overflow: hidden;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+}
+
+#services .scrolling-wrapper .service-card img {
+    width: 100%;
+    height: 60%;
+    object-fit: cover;
+    transition: transform 0.3s ease;
+}
+
+#services .scrolling-wrapper .service-card:hover {
+    transform: translateY(-10px) scale(1.05);
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.2);
+}
+
+#services .scrolling-wrapper .service-card:hover img {
+    transform: scale(1.1);
+}
+
+#services .scrolling-wrapper .service-card h3 {
+    font-size: 1.5rem;
+    margin-top: 15px;
+    color: #333;
+    text-align: center;
+}
+
+#services .scrolling-wrapper .service-card .btn {
+    display: block;
+    margin: 20px auto 0;
+    padding: 10px 20px;
+    font-size: 1rem;
+    transition: background-color 0.3s ease, transform 0.3s ease;
+}
+
+#services .scrolling-wrapper .service-card .btn:hover {
+    background-color: #0056b3;
+    transform: scale(1.1);
+}
+
+@keyframes scroll {
+    0% {
+        transform: translateX(0);
+    }
+    100% {
+        transform: translateX(-100%);
+    }
+}
+
+/* Services Section Carousel */
+.carousel-container {
+    width: 100%;
+    max-width: 1200px;
+    overflow: hidden;
+    position: relative;
+}
+
+.carousel {
+    display: flex;
+    animation: slide 20s linear infinite;
+}
+
+.carousel.paused {
+    animation-play-state: paused;
+}
+
+.card {
+    flex: 0 0 300px;
+    margin: 10px;
+    background-color: white;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    overflow: hidden;
+    text-align: center;
+    cursor: pointer;
+    transition: transform 0.2s;
+}
+
+.card:hover {
+    transform: scale(1.05);
+}
+
+.card img {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+}
+
+.card-content {
+    padding: 15px;
+}
+
+.card-content h3 {
+    margin: 0;
+    font-size: 1.5em;
+    color: #333;
+}
+
+.card-content p {
+    margin: 10px 0;
+    color: #666;
+}
+
+.card-content .price {
+    font-size: 1.2em;
+    color: #e91e63;
+    font-weight: bold;
+}
+
+@keyframes slide {
+    0% {
+        transform: translateX(0);
+    }
+    100% {
+        transform: translateX(-100%);
+    }
+}
+
+@media (max-width: 768px) {
+    .card {
+        flex: 0 0 250px;
+    }
+}
+
+/* Added styles from index.html */
+
+.scrolling-wrapper {
+    display: flex;
+    overflow: hidden;
+    white-space: nowrap;
+    position: relative;
+}
+
+.scrolling-wrapper .service-card {
+    flex: 0 0 auto;
+    margin-right: 20px;
+    animation: continuous-slide 10s linear infinite;
+}
+
+@keyframes continuous-slide {
+    0% {
+        transform: translateX(100%);
+    }
+    100% {
+        transform: translateX(-100%);
+    }
+}
+
+.scrolling-wrapper:hover .service-card {
+    animation-play-state: paused; /* Pause sliding on hover */
+}
+
+.carousel-container {
+    width: 100%;
+    max-width: 1200px;
+    overflow: hidden;
+    position: relative;
+}
+
+.carousel {
+    display: flex;
+    animation: slide 20s linear infinite;
+}
+
+.carousel.paused {
+    animation-play-state: paused;
+}
+
+.card {
+    flex: 0 0 300px;
+    margin: 10px;
+    background-color: white;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    overflow: hidden;
+    text-align: center;
+    cursor: pointer;
+    transition: transform 0.2s;
+}
+
+.card:hover {
+    transform: scale(1.05);
+}
+
+.card img {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+}
+
+.card-content {
+    padding: 15px;
+}
+
+.card-content h3 {
+    margin: 0;
+    font-size: 1.5em;
+    color: #333;
+}
+
+.card-content p {
+    margin: 10px 0;
+    color: #666;
+}
+
+.card-content .price {
+    font-size: 1.2em;
+    color: #e91e63;
+    font-weight: bold;
+}
+
+@keyframes slide {
+    0% {
+        transform: translateX(0);
+    }
+    100% {
+        transform: translateX(-100%);
+    }
+}
+
+@media (max-width: 768px) {
+    .card {
+        flex: 0 0 250px;
+    }
+}
+
+/* Moved styles from index.html */
+
+.scrolling-wrapper {
+    display: flex;
+    overflow: hidden;
+    white-space: nowrap;
+}
+
+.scrolling-wrapper .service-card {
+    flex: 0 0 auto;
+    margin-right: 20px;
+    animation: slide 10s linear infinite;
+}
+
+@keyframes slide {
+    0% {
+        transform: translateX(100%);
+    }
+    100% {
+        transform: translateX(-100%);
+    }
+}
+
+.scrolling-wrapper:hover .service-card {
+    animation-play-state: paused; /* Pause sliding on hover */
+}
+
+.scrolling-wrapper {
+    display: flex;
+    overflow-x: auto;
+    white-space: nowrap;
+    scroll-behavior: smooth;
+}
+
+.scrolling-wrapper .service-card {
+    flex: 0 0 auto;
+    margin-right: 20px;
+}
+
+.scrolling-wrapper::-webkit-scrollbar {
+    display: none; /* Hide scrollbar for better UX */
+}
+
+.scrolling-wrapper {
+    display: flex;
+    overflow: hidden;
+    white-space: nowrap;
+    position: relative;
+}
+
+.scrolling-wrapper .service-card {
+    flex: 0 0 auto;
+    margin-right: 20px;
+    animation: continuous-slide 10s linear infinite;
+}
+
+@keyframes continuous-slide {
+    0% {
+        transform: translateX(100%);
+    }
+    100% {
+        transform: translateX(-100%);
+    }
+}
+
+.scrolling-wrapper:hover .service-card {
+    animation-play-state: paused; /* Pause sliding on hover */
+}
+
+.scrolling-wrapper {
+    display: flex;
+    overflow: hidden;
+    white-space: nowrap;
+    animation: continuous-slide 20s linear infinite;
+}
+
+.scrolling-wrapper .service-card {
+    flex: 0 0 auto;
+    margin-right: 20px;
+}
+
+@keyframes continuous-slide {
+    0% {
+        transform: translateX(0);
+    }
+    100% {
+        transform: translateX(-100%);
+    }
+}
+
+.scrolling-wrapper:hover {
+    animation-play-state: paused; /* Pause sliding on hover */
+}
+

@@ -1,0 +1,62 @@
+/* Navbar */
+.navbar-brand {
+    font-size: 1.5rem;
+}
+
+.nav-link {
+    font-weight: 500;
+    color: #333;
+    transition: color 0.3s ease;
+}
+
+.nav-link:hover {
+    color: #0d6efd;
+}
+
+/* Footer Section */
+footer {
+    background-color: #003366; /* Dark blue background */
+    color: #ffffff; /* White text */
+}
+
+footer h5 {
+    font-size: 1.25rem;
+    margin-bottom: 1rem;
+}
+
+footer p {
+    font-size: 0.95rem;
+    line-height: 1.6;
+}
+
+footer a {
+    color: #ffffff;
+    transition: color 0.3s ease;
+}
+
+footer a:hover {
+    color: #00bcd4; /* Light blue hover effect */
+}
+
+footer .bi {
+    font-size: 1.5rem;
+    transition: transform 0.3s ease, color 0.3s ease;
+}
+
+footer .bi:hover {
+    transform: scale(1.2);
+    color: #00bcd4;
+}
+
+footer .border-end {
+    padding-right: 20px;
+}
+
+footer hr {
+    border-color: rgba(255, 255, 255, 0.2);
+}
+
+footer .text-center p {
+    font-size: 0.9rem;
+    margin-top: 1rem;
+}
